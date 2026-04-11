@@ -36,6 +36,8 @@ Additionally, conversation history can be stored using a database (such as Postg
 
 Future improvements could include adding persistent memory using vector databases, implementing user authentication, and deploying the system using Docker for scalability.
 
+## Demo video
+A demo video has been uploaded showing the agent detecting high intent, answering a pricing question, collecting user details and successful lead capture using the mock tool. 
 ## Setup
 
 ```bash

@@ -32,12 +32,12 @@ The backend extracts the user message and passes it to the LangGraph agent by in
 
 This response is then sent back to the WhatsApp API using an outbound API call, which delivers the message to the user in real time.
 
-Additionally, conversation history can be stored using a database (such as ostgreSQL) keyed by the user’s phone number, enabling persistent multi-turn conversations across sessions.
+Additionally, conversation history can be stored using a database (such as PostgreSQL) keyed by the user’s phone number, enabling persistent multi-turn conversations across sessions.
 
 Future improvements could include adding persistent memory using vector databases, implementing user authentication, and deploying the system using Docker for scalability.
-## Setup
 
+## Setup
 ```bash
-git clone https://github.com/YOUR_USERNAME/autostream-agent.git
-cd autostream-agent
+git clone https://github.com/Ekam334/autostream-agent.git
+cd autostream-ai-agent
 pip install -r requirements.txt

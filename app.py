@@ -18,6 +18,12 @@ def mock_lead_capture(name, email, platform):
 def chat():
     print("AutoStream agent ready! Type 'exit' to quit.\n")
     history = ''
+
+    lead = {
+        "name":None,
+        "email":None,
+        "platform": None
+    }
     while True:
         user_input = input("You: ")
 
@@ -35,7 +41,29 @@ def chat():
 
         result = graph.invoke(state)
         response = result['response']
+        intent = result.get("intent")
+        
+        #handling high intent leads
+        if intent == "high_intent":
+            if not lead["name"]:
+                lead['name']=input("What is your name? ")
+            if not lead['email']:
+                lead['email']=input("Your Email? ")
+            if not lead['platform']:
+                lead['platform']=input("Which platform do you use? ")
+            mock_lead_capture(
+                lead['name'],
+                lead['email'],
+                lead['platform']
+            )
 
+            lead = {
+                "name":None,
+                "email":None,
+                "platform": None
+            }   
+            
+            continue
         print(f"\n AutoStream: {response}\n")
         history += f"Bot: {response}\n"
 

@@ -15,7 +15,7 @@ An AI-powered conversational agent built using LLMs, RAG, and LangGraph.
 - FAISS
 - Sentence Transformers
 - Google Gemini API
-- 
+ 
 ## Architecture Explanation
 
 This project uses LangGraph to design the conversational agent as a state machine, instead of relying on traditional if-else logic. LangGraph was chosen because it enables structured, modular workflows where each step (intent detection, retrieval, response generation) is represented as a node, and transitions are handled through conditional edges. This makes the system scalable, easier to debug, and closer to real-world AI agent architectures.

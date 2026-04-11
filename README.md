@@ -37,7 +37,13 @@ Additionally, conversation history can be stored using a database (such as Postg
 Future improvements could include adding persistent memory using vector databases, implementing user authentication, and deploying the system using Docker for scalability.
 
 ## Setup
+
 ```bash
 git clone https://github.com/Ekam334/autostream-agent.git
 cd autostream-ai-agent
 pip install -r requirements.txt
+```
+After cloning the repository, create a .env file inside the repository, and use your own google gemini api key as:
+``` bash
+GOOGLE_API_KEY=your_api_key_here
+```
